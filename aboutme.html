@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me | ze's site</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>⚡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="hero-title title-desktop">about me</h1>
+        <h1 class="hero-title title-mobile">about<br>me</h1>
+        <div class="scribble-scratch"></div>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">/home</a>
+        <a href="projects.html">/projects</a>
+        <a href="setup.html">/setup</a>
+        <p style="text-decoration: underline wavy; color: #000;">/aboutme</p>
+    </nav>
+
+   
+    <main class="sketch-container">
+        <p style="font-family: 'Caveat', cursive; font-size: 2.6rem; font-weight: bold; text-align: center; color: #000; margin-bottom: 0.3em;">
+            hey there, i'm ze!
+        </p>
+
+        <p>
+            I'm a developer, Artist , Animator , Game Dev ,  based in India. I love crafting tools that are <b>fast</b>, <b>offline-first</b>, and <b>free of telemetry</b>.
+        </p>
+
+        <p>
+            I build native Android media clients (<a href="projects.html">AnimeZe</a> with 73★, <a href="projects.html">DayNight Music</a>), terminal visualizers (<a href="projects.html">lyre</a> with 61★ on npm), and low-level audio DSP experiments in Rust.
+        </p>
+
+        <p>
+            When I'm not writing code, I'm ricing Arch Linux on Hyprland,Drawing, or idk skating maybe i love that too .
+        </p>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 1.5em;">
+            <a href="https://github.com/DeadZone-0" target="_blank" rel="noopener noreferrer" class="pen-strike-btn" style="padding: 10px 18px; font-size: 1.5rem;">
+                GitHub (@DeadZone-0)
+            </a>
+            <button onclick="copyDiscord(this)" class="pen-strike-btn" style="padding: 10px 18px; font-size: 1.5rem;">
+                Discord (<span id="dc-label">@Ze_.68</span>)
+            </button>
+            <a href="mailto:riyalkrypton@outlook.com" class="pen-strike-btn" style="padding: 10px 18px; font-size: 1.5rem;">
+                Email Me
+            </a>
+        </div>
+    </main>
+
+
+    <footer class="stickyboi">
+        <p>sketched with ♥ by ze</p>
+    </footer>
+
+    <script>
+        function copyDiscord(btn) {
+            navigator.clipboard.writeText('deadzone0').then(() => {
+                const label = document.getElementById('dc-label');
+                label.textContent = 'COPIED!';
+                setTimeout(() => { label.textContent = '@deadzone0'; }, 2000);
+            });
+        }
+    </script>
+ 
+</body>
+</html>

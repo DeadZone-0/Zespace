@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>projects | ze's site</title>
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>⚡</text></svg>">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <h1 class="hero-title title-desktop">my projects</h1>
+            <h1 class="hero-title title-mobile">my<br>projects</h1>
+            <div class="scribble-scratch"></div>
+        </header>
+
+        <nav class="nav">
+            <a href="index.html">/home</a>
+            <p style="text-decoration: underline wavy; color: #000;">/projects</p>
+            <a href="setup.html">/setup</a>
+            <a href="aboutme.html">/aboutme</a>
+        </nav>
+
+    <main class="projects-masonry">
+        <!-- AnimeZe -->
+        <article class="sketch-card">
+            <img class="card-img" src="assets/screenshots/animeze/home.webp" alt="AnimeZe preview">
+            <h2 class="card-title">AnimeZe (73★)</h2>
+            <p class="card-desc">Native Android anime streaming and manga reader. Built because official apps were full of ads and trackers. Episode countdown schedules, background offline chapter downloads, and ExoPlayer streaming in one APK.</p>
+            <div class="card-links">
+                <a href="https://github.com/DeadZone-0/AnimeZe" target="_blank" rel="noopener noreferrer">~> github repo</a>
+                <a href="https://github.com/DeadZone-0/AnimeZe/releases" target="_blank" rel="noopener noreferrer">~> download apk</a>
+            </div>
+        </article>
+
+        <!-- lyre -->
+        <article class="sketch-card">
+            <!-- img-->
+            <h2 class="card-title">lyre (61★)</h2>
+            <p class="card-desc">Terminal music visualizer and metadata TUI built with Ink. Real-time CAVA audio frequency spectrum analysis with Linux MPRIS playerctl hooks.</p>
+            <div class="card-links">
+                <a href="https://github.com/DeadZone-0/lyre" target="_blank" rel="noopener noreferrer">~> github repo</a>
+                <span style="font-family: monospace; font-size: 13px; color: #555;">npm i -g lyre-tui</span>
+            </div>
+        </article>
+
+        <!-- DayNight Music -->
+        <article class="sketch-card">
+            <img class="card-img" src="assets/screenshots/daynight/player.webp" alt="DayNight Music preview">
+            <h2 class="card-title">DayNight Music (6★)</h2>
+            <p class="card-desc">Ad-free Android music player with real-time synchronized LRCLib lyrics, Last.fm recommendations, and multi-tier offline caching.</p>
+            <div class="card-links">
+                <a href="https://github.com/DeadZone-0/DayNight-Music" target="_blank" rel="noopener noreferrer">~> github repo</a>
+                <a href="https://daynightmusic.vercel.app/" target="_blank" rel="noopener noreferrer">~> web app</a>
+            </div>
+        </article>
+
+        <!-- Lyre Rust -->
+        <article class="sketch-card">
+            <div style="background: #ffffff; border: 2px solid var(--ink); border-radius: 4px; padding: 14px; font-family: monospace; font-size: 12px; color: #000; margin-bottom: 10px; line-height: 1.4;">
+                
+                type shi 
+            </div>
+            <h2 class="card-title">Lyre (Rust Core)</h2>
+            <p class="card-desc">Porting Lyre's audio engine to Rust for zero overhead. Native fast-Fourier transform (FFT) sampling directly from ALSA and PipeWire ring buffers.</p>
+            <div class="card-links">
+                <a href="https://github.com/DeadZone-0/Lyre-rust" target="_blank" rel="noopener noreferrer">~> github repo</a>
+            </div>
+        </article>
+
+        <!-- Genshin Tracker 
+        <article class="sketch-card">
+            <h2 class="card-title">genshin-tracker</h2>
+            <p class="card-desc">Native Linux tools, memory inspection hooks, and Wayland compatibility for gaming on Arch Linux.</p>
+            <div class="card-links">
+                <a href="https://github.com/DeadZone-0/genshin-tracker-linux" target="_blank" rel="noopener noreferrer">~> github repo</a>
+            </div>
+        </article>-->
+    </main>
+
+    
+
+    <footer class="stickyboi">
+        <p>sketched with ♥ by ze</p>
+    </footer>
+
+</body>
+</html>
