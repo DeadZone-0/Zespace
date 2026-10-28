@@ -16,44 +16,186 @@
                 <h1 class="hero-title ">Ze's site</h1>
                 
             </div>
+            <div class="scribble-scratch"></div>
         </header>
 
         <main class="main-container">
             <div class="column-cluster">
                 <p class="column-label">stuff</p>
-                <a href="https://github.com/DeadZone-0">
+                <a href="https://github.com/DeadZone-0" target="_blank" rel="noopener noreferrer" class="pen-strike-btn">
                     <i class="fa-brands fa-github"></i>
                     <p>My github </p>
                 </a>
 
-
                 <button class="pen-strike-btn" onclick="copyDiscord(this)">
                     <i class="fa-brands fa-discord"></i>
                     <p id="dc-text">add me on discord</p>
-            </button>
-
+                </button>
             </div>
-        <!-- right -->
+
+            <!-- right -->
             <div class="column-cluster">
                 <p class="column-label">more stuff</p>
-            <div class="items-grid">
-                <a href="projects.html" class="pen-strike-btn btn-projects">
-                    <p>/projects</p>
-                </a>
-                <a href="setup.html" class="pen-strike-btn btn-setup">
-                    <p>/setup</p>
-                </a>
-                <a href="aboutme.html" class="pen-strike-btn btn-about">
-                    <p>/aboutme</p>
-                </a>
+                <div class="items-grid">
+                    <a href="projects.html" class="pen-strike-btn btn-projects">
+                        <p>/projects</p>
+                    </a>
+                    <a href="setup.html" class="pen-strike-btn btn-setup">
+                        <p>/setup</p>
+                    </a>
+                    <a href="aboutme.html" class="pen-strike-btn btn-about">
+                        <p>/aboutme</p>
+                    </a>
+                </div>
             </div>
-        
-
-        
-            <footer class="stickyboi">
-                <p>drawn with ♥ by ze</p>
-            </footer>
         </main>
+
+        <!-- ── SIDE PULL TAB FOR TORN SKETCH SHEET ────────────────── -->
+        <button id="blog-tab" class="blog-pull-tab" onclick="toggleTornSheet()" aria-label="Pull out thoughts and scraps sheet">
+            <span>✎ scraps &amp; thoughts</span>
+            <span style="font-size: 1.2rem;">◄</span>
+        </button>
+
+        <!-- ── TORN PAPER BACKDROP & SHEET ──────────────────────────── -->
+        <div id="sheet-backdrop" class="blog-backdrop" onclick="toggleTornSheet()"></div>
+
+        <aside id="torn-sheet" class="torn-paper-sheet" aria-label="Loose thoughts and notebook scraps">
+            <div class="tape-strip"></div>
+            <div class="sheet-header">
+                <h2 class="sheet-title">~ loose scraps ~</h2>
+                <button class="sheet-push-btn" onclick="toggleTornSheet()">push back ×</button>
+            </div>
+
+            <!-- 3 Hand-Drawn Section Switcher Tabs -->
+            <div class="sheet-tabs-nav">
+                <button class="sheet-tab-btn active" onclick="switchSheetTab('blogs', this)">✎ blogs</button>
+                <button class="sheet-tab-btn" onclick="switchSheetTab('thoughts', this)"> thoughts</button>
+                <button class="sheet-tab-btn" onclick="switchSheetTab('timestuff', this)"> time stuff</button>
+            </div>
+
+            <div class="sheet-content">
+                <!-- TAB 1: BLOGS -->
+                <div id="section-blogs" class="sheet-section active">
+                    <article class="scrap-entry">
+                        <div class="scrap-time">[ DEV LOG &middot; 2026-10-28 ]</div>
+                        <h3 class="scrap-heading">Demo1</h3>
+                        <p class="scrap-body">
+                            jhg
+                        </p>
+                    </article>
+
+                    <article class="scrap-entry">
+                        <div class="scrap-time">[ ARCHITECTURE &middot; 2026-10-15 ]</div>
+                        <h3 class="scrap-heading">gh</h3>
+                        <p class="scrap-body">
+                            too much shits 
+                        </p>
+                    </article>
+
+                    <article class="scrap-entry">
+                        <div class="scrap-time">[ LINUX RICE &middot; 2026-09-30 ]</div>
+                        <h3 class="scrap-heading">frr</h3>
+                        <p class="scrap-body">
+                            
+                        </p>
+                    </article>
+                </div>
+
+                <!-- TAB 2: THOUGHTS -->
+                <div id="section-thoughts" class="sheet-section">
+                    <article class="scrap-entry">
+                        <div class="scrap-time">hmm</div>
+                        <p class="scrap-body">
+                           still thinking
+                    </article>
+
+                  
+                </div>
+
+                <!-- TAB 3: TIME STUFF -->
+                <div id="section-timestuff" class="sheet-section">
+                    <div class="time-stat-grid">
+                        <div class="time-stat-box">
+                            <div class="time-stat-label">Local Clock (IST)</div>
+                            <div class="time-stat-val" id="sheet-clock">--:--:-- IST</div>
+                        </div>
+                       
+                    </div>
+
+                    <article class="scrap-entry">
+                        <div class="scrap-time">workstation info</div>
+                        <h3 class="scrap-heading">arch linux daily driver</h3>
+                        <p class="scrap-body">
+                       </p>
+                    </article>
+                </div>
+            </div>
+        </aside>
+
+        <footer class="stickyboi">
+            <p>drawn with ♥ by ze</p>
+        </footer>
+
+        <script>
+            function toggleTornSheet() {
+                const sheet = document.getElementById('torn-sheet');
+                const backdrop = document.getElementById('sheet-backdrop');
+                const isOpen = sheet.classList.contains('open');
+                if (isOpen) {
+                    sheet.classList.remove('open');
+                    backdrop.classList.remove('open');
+                } else {
+                    sheet.classList.add('open');
+                    backdrop.classList.add('open');
+                }
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const sheet = document.getElementById('torn-sheet');
+                    const backdrop = document.getElementById('sheet-backdrop');
+                    if (sheet && sheet.classList.contains('open')) {
+                        sheet.classList.remove('open');
+                        backdrop.classList.remove('open');
+                    }
+                }
+            });
+
+            function switchSheetTab(tabId, btn) {
+                document.querySelectorAll('.sheet-tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.sheet-section').forEach(s => s.classList.remove('active'));
+                if (btn) btn.classList.add('active');
+                const target = document.getElementById('section-' + tabId);
+                if (target) target.classList.add('active');
+            }
+
+            function updateSheetClock() {
+                const el = document.getElementById('sheet-clock');
+                if (el) {
+                    const now = new Date();
+                    el.textContent = now.toLocaleTimeString('en-US', {
+                        timeZone: 'Asia/Kolkata',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: true
+                    }) + ' IST';
+                }
+            }
+            updateSheetClock();
+            setInterval(updateSheetClock, 1000);
+
+            function copyDiscord(btn) {
+                const el = document.getElementById('dc-text');
+                navigator.clipboard.writeText('Ze_.68').then(() => {
+                    const old = el.innerHTML;
+                    el.innerHTML = 'copied: @Ze_.68!';
+                    setTimeout(() => { el.innerHTML = old; }, 2200);
+                }).catch(() => {
+                    window.open('https://discord.com/users/deadzone0', '_blank');
+                });
+            }
+        </script>
     </body>
 
 </html>
