@@ -1,1 +1,26 @@
-ccccc
+:root {
+    --paper: #ffffff;
+    --ink: #000000;
+}
+
+body {
+    background-color: var(--paper);
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Caveat', cursive, sans-serif;
+    /* Clean stark paper with subtle stray ink flecks */
+    background-image:
+        radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: center top;
+    overflow-x: hidden;
+    line-height: 1.4;
+}
+
+a, button, input {
+    text-decoration: none;
+    color: inherit;
+}
