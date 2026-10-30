@@ -3,7 +3,7 @@
 A lightweight, zero-telemetry personal portfolio and thought-dump space styled with an energetic, hand-inked lineart aesthetic.
 
 
-**[Explore Live Demo →](https://deadzone-0.github.io/ze-portfolio/)**
+**[Explore Live Demo →](https://deadzone-0.github.io/Zespace/)**
 
 ---
 
